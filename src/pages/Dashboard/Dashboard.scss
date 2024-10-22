@@ -1,0 +1,133 @@
+.stock-list-items {
+  display: flex;
+  flex-direction: column;
+
+  .stock-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    background-color: transparent;
+
+    &.green {
+      color: green;
+    }
+
+    &.red {
+      color: red;
+    }
+
+    .stock-item-title {
+      color: black;
+      font-weight: 600;
+    }
+
+    .stock-numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .stock-number-pr {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .stock-item.clicked {
+    background-color: #EFEFEF;
+  }
+
+}
+
+.main-section {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  border-top: 1px solid #ccc;
+  height: calc(100vh - 79px);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  .stock-list {
+    width: 20%;
+    border-right: 1px solid #ccc;
+  }
+
+  .input-field {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+
+    .stock-list-input {
+      border: none;
+      width: calc(100% - 24px);
+      height: 28px;
+      padding: 5px 12px;
+      margin-bottom: 0 !important;
+    }
+
+    .icon-tooltip {
+      font-size: 12px !important;
+      padding: 6px 8px !important;
+    }
+
+    .input-icon {
+      margin-top: 2px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    .rotate{
+      transform: rotate(180deg);
+    }
+  }
+
+  .stock-list-input:focus-visible {
+    outline: none !important;
+  }
+  .input-icon:focus{
+    outline: none !important;
+  }
+}
+
+.stock-section {
+  width: 80%;
+  padding-top: 24px;
+
+  .stock-chart-button {
+    padding: 0 10px 20px 20px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    gap: 12px;
+
+    .button {
+      height: 38px;
+      border: none;
+      padding: 0 12px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 6px;
+    }
+
+    .active {
+      border: 1px solid black
+    }
+  }
+
+  .stock-content {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 24px;
+
+    .stock-chart {
+      .stock-chart-title {
+        margin-top: 0 !important;
+      }
+    }
+
+    .overview-content {
+      .overview-title {
+        margin-top: 0;
+      }
+    }
+  }
+}
